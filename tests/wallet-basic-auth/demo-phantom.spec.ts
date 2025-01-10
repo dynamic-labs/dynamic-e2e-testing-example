@@ -7,8 +7,6 @@ test('authenticate with phantom', async ({
   page,
 }) => {
   await phantom.createWallet();
-  await phantom.page.pause()
-
   const homepage = new HomePage(page);
   await homepage.continueWithWalletBtn.click();
   await phantom.connectWallet();
